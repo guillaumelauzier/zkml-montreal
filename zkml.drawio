@@ -90,7 +90,7 @@
           <mxGeometry x="400" y="453" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="poqtZ3HqP-JEbbXibXvg-17" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Use Case&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="414" y="20" width="280" height="30" as="geometry" />
+          <mxGeometry x="30" y="20" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="poqtZ3HqP-JEbbXibXvg-20" value="Image&amp;nbsp;&lt;div&gt;DB&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
           <mxGeometry x="110" y="528" width="60" height="80" as="geometry" />
@@ -105,7 +105,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="poqtZ3HqP-JEbbXibXvg-33" value="Federated Learning Local Models" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="600" y="170" width="150" height="30" as="geometry" />
+          <mxGeometry x="600" y="175" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="poqtZ3HqP-JEbbXibXvg-34" value="zK Proof of Work" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="645" y="303" width="60" height="30" as="geometry" />
