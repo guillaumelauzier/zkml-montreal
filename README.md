@@ -111,4 +111,24 @@ zKML is a foundational piece in the broader ecosystem of privacy-preserving, sec
 
 ---
 
+### Problem Statement
+
+In today's data-driven world, the potential to leverage large datasets for machine learning in sectors like healthcare and finance is immense. Access to such data could lead to better decision-making, more accurate predictions, and ultimately, societal benefits such as improved public health outcomes and more stable financial systems. However, the sensitive nature of this data creates significant barriers:
+
+1. **Data Privacy Concerns**: Organizations, including governments and financial institutions, are often reluctant to share their data due to privacy concerns. The fear of exposing sensitive information—such as personal health records or financial transactions—prevents collaboration, even when the shared goal is to achieve common societal benefits.
+
+2. **Trust Issues**: In collaborative environments, there is often a lack of trust among the involved parties. Each party is concerned about how their data will be used, whether their contributions will be acknowledged, and whether the integrity of the collaborative work can be maintained without compromising sensitive data.
+
+3. **Lack of Verifiable Proof**: When multiple entities collaborate on training machine learning models, there's a critical need for verifiable proof that all parties have contributed as agreed. However, ensuring this while maintaining data privacy and security is a complex challenge.
+
+### Core Challenges:
+- **Balancing Data Utility with Privacy**: How can we enable the sharing and use of sensitive data for training machine learning models without compromising the privacy of that data?
+- **Establishing Trust in Collaborative Settings**: How can different entities trust that their data is being used correctly and that the collaborative effort is fair and secure?
+- **Providing Verifiable Proof of Work**: How can we ensure that the contributions of each party in a collaborative machine learning effort are provable and verifiable without revealing the underlying data?
+
+### Solution:
+**Zero-Knowledge Machine Learning (zKML)** offers a promising solution by enabling the training of machine learning models in a way that ensures data privacy, fosters trust among collaborators, and provides verifiable proof of work. Through the use of zero-knowledge proofs, zKML allows data to be utilized without being exposed, ensuring that sensitive information remains secure while still contributing to the overall model. This approach addresses the core challenges of privacy, trust, and proof, making it possible to unlock the full potential of collaborative machine learning in sensitive domains.
+
+---
+
 *This project was created as part of the zK Montreal Hackathon to explore the possibilities of Zero-Knowledge Machine Learning (zKML) in solving real-world privacy challenges. We’re just getting started, and we’re excited to see where this journey takes us!*
