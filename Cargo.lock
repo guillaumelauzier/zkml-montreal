@@ -16,7 +16,7 @@ checksum = "c34056136e0910411c88e9af0bca6e23fcdba258da239684014cd45ca900c9f0"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -141,7 +141,7 @@ checksum = "6e0c28dcc82d7c8ead5cb13beb15405b57b8546e93215673ff8ca0349a028107"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -336,7 +336,7 @@ checksum = "1ee891b04274a59bd38b412188e24b849617b2e45a0fd8d057deb63e7403761b"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -454,9 +454,9 @@ dependencies = [
 
 [[package]]
 name = "cc"
-version = "1.1.9"
+version = "1.1.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f87b298677bb2f19f542743f145dd7f1de0fc7798bc41ee54684e4e16778c8a7"
+checksum = "e9e8aabfac534be767c909e0690571677d49f41bd8465ae876fe043d52ba5292"
 
 [[package]]
 name = "cfg-if"
@@ -570,7 +570,7 @@ checksum = "67e77553c4162a157adbf834ebae5b415acbecbeafc7a74b0e886657506a7611"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -583,7 +583,7 @@ dependencies = [
  "proc-macro2",
  "quote",
  "rustc_version",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -624,7 +624,7 @@ checksum = "97369cbbc041bc366949bc74d34658d6cda5621039731c6310521892a3a20ae0"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -658,7 +658,7 @@ dependencies = [
  "heck",
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -954,9 +954,10 @@ name = "gradient-boosting-prover"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "ff",
  "rayon",
  "tracing",
- "zk-engine 0.1.0 (git+https://github.com/ICME-Lab/zkEngine_dev.git)",
+ "zk-engine 0.1.0 (git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main)",
 ]
 
 [[package]]
@@ -1463,7 +1464,7 @@ dependencies = [
  "proc-macro-crate",
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -1741,7 +1742,7 @@ checksum = "bcc303e793d3734489387d205e9b186fac9c6cfacedd98cbb2e8a5943595f3e6"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -1878,7 +1879,7 @@ checksum = "e5af959c8bf6af1aff6d2b463a57f71aae53d1332da58419e30ad8dc7011d951"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -1930,9 +1931,9 @@ checksum = "a3f0bf26fd526d2a95683cd0f87bf103b8539e2ca1ef48ce002d67aad59aa0b4"
 
 [[package]]
 name = "serde"
-version = "1.0.205"
+version = "1.0.206"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e33aedb1a7135da52b7c21791455563facbbcc43d0f0f66165b42c21b3dfb150"
+checksum = "5b3e4cd94123dd520a128bcd11e34d9e9e423e7e3e50425cb1b4b1e3549d0284"
 dependencies = [
  "serde_derive",
 ]
@@ -1948,13 +1949,13 @@ dependencies = [
 
 [[package]]
 name = "serde_derive"
-version = "1.0.205"
+version = "1.0.206"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "692d6f5ac90220161d6774db30c662202721e64aed9058d2c394f451261420c1"
+checksum = "fabfb6138d2383ea8208cf98ccf69cdfb1aff4088460681d84189aa259762f97"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -2074,9 +2075,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "2.0.72"
+version = "2.0.73"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dc4b9b9bf2add8093d3f2c0204471e951b2285580335de42f9d2534f3ae7a8af"
+checksum = "837a7e8026c6ce912ff01cefbe8cafc2f8010ac49682e2a3d9decc3bce1ecaaf"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -2091,7 +2092,7 @@ checksum = "c8af7666ab7b6390ab78131fb5b0fce11d6b7a6951602017c35fa82800708971"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -2160,7 +2161,7 @@ checksum = "a4558b58466b9ad7ca0f102865eccc95938dca1a74a856f2b57b6629050da261"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -2263,7 +2264,7 @@ checksum = "34704c8d6ebcbc939824180af020566b01a7c01f80641264eba0999f6c2b6be7"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -2475,7 +2476,7 @@ dependencies = [
  "once_cell",
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
  "wasm-bindgen-shared",
 ]
 
@@ -2497,7 +2498,7 @@ checksum = "e94f17b526d0a461a191c78ea52bbce64071ed5c04c9ffe424dcb38f74171bb7"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
  "wasm-bindgen-backend",
  "wasm-bindgen-shared",
 ]
@@ -2520,7 +2521,7 @@ dependencies = [
 [[package]]
 name = "wasmi"
 version = "0.31.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git#677bf2cba3ad70f90bd4022515899943916219e6"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#43b19356c2f9f4009a032cc18af85c1d3a16518a"
 dependencies = [
  "anyhow",
  "multi-stash",
@@ -2539,12 +2540,12 @@ dependencies = [
 [[package]]
 name = "wasmi_arena"
 version = "0.4.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git#677bf2cba3ad70f90bd4022515899943916219e6"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#43b19356c2f9f4009a032cc18af85c1d3a16518a"
 
 [[package]]
 name = "wasmi_core"
 version = "0.13.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git#677bf2cba3ad70f90bd4022515899943916219e6"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#43b19356c2f9f4009a032cc18af85c1d3a16518a"
 dependencies = [
  "downcast-rs",
  "libm",
@@ -2556,7 +2557,7 @@ dependencies = [
 [[package]]
 name = "wasmi_wasi"
 version = "0.31.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git#677bf2cba3ad70f90bd4022515899943916219e6"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#43b19356c2f9f4009a032cc18af85c1d3a16518a"
 dependencies = [
  "wasi-cap-std-sync",
  "wasi-common",
@@ -2932,7 +2933,7 @@ checksum = "28cc31741b18cb6f1d5ff12f5b7523e3d6eb0852bbbad19d73905511d9849b95"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
  "synstructure",
 ]
 
@@ -2954,7 +2955,7 @@ checksum = "fa4f8080344d4671fb4e831a13ad1e68092748387dfc4f55e356242fae12ce3e"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -2974,7 +2975,7 @@ checksum = "0ea7b4a3637ea8669cedf0f1fd5c286a17f3de97b8dd5a70a6c167a1730e63a5"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
  "synstructure",
 ]
 
@@ -2995,7 +2996,7 @@ checksum = "ce36e65b0d2999d2aafac989fb249189a141aee1f53c612c1f37d72631959f69"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.72",
+ "syn 2.0.73",
 ]
 
 [[package]]
@@ -3022,7 +3023,7 @@ checksum = "05830e57020ba43dd59b67608985017dbba680bbdb22f2e33c059b163ad88582"
 [[package]]
 name = "zk-engine"
 version = "0.1.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git#677bf2cba3ad70f90bd4022515899943916219e6"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#43b19356c2f9f4009a032cc18af85c1d3a16518a"
 dependencies = [
  "anyhow",
  "arecibo",
