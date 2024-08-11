@@ -950,17 +950,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d2fabcfbdc87f4758337ca535fb41a6d701b65693ce38287d856d1674551ec9b"
 
 [[package]]
-name = "gradient-boosting-prover"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "ff",
- "rayon",
- "tracing",
- "zk-engine 0.1.0 (git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main)",
-]
-
-[[package]]
 name = "group"
 version = "0.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1330,6 +1319,17 @@ dependencies = [
  "forust-ml",
  "getrandom",
  "zk-engine 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "ml-prover"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "ff",
+ "rayon",
+ "tracing",
+ "zk-engine 0.1.0 (git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main)",
 ]
 
 [[package]]
@@ -2521,7 +2521,7 @@ dependencies = [
 [[package]]
 name = "wasmi"
 version = "0.31.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#43b19356c2f9f4009a032cc18af85c1d3a16518a"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#4e73af693c079002ac4d6887ea198b1e2d5099c4"
 dependencies = [
  "anyhow",
  "multi-stash",
@@ -2540,12 +2540,12 @@ dependencies = [
 [[package]]
 name = "wasmi_arena"
 version = "0.4.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#43b19356c2f9f4009a032cc18af85c1d3a16518a"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#4e73af693c079002ac4d6887ea198b1e2d5099c4"
 
 [[package]]
 name = "wasmi_core"
 version = "0.13.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#43b19356c2f9f4009a032cc18af85c1d3a16518a"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#4e73af693c079002ac4d6887ea198b1e2d5099c4"
 dependencies = [
  "downcast-rs",
  "libm",
@@ -2557,7 +2557,7 @@ dependencies = [
 [[package]]
 name = "wasmi_wasi"
 version = "0.31.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#43b19356c2f9f4009a032cc18af85c1d3a16518a"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#4e73af693c079002ac4d6887ea198b1e2d5099c4"
 dependencies = [
  "wasi-cap-std-sync",
  "wasi-common",
@@ -3023,7 +3023,7 @@ checksum = "05830e57020ba43dd59b67608985017dbba680bbdb22f2e33c059b163ad88582"
 [[package]]
 name = "zk-engine"
 version = "0.1.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#43b19356c2f9f4009a032cc18af85c1d3a16518a"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#4e73af693c079002ac4d6887ea198b1e2d5099c4"
 dependencies = [
  "anyhow",
  "arecibo",

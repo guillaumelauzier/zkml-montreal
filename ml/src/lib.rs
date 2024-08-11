@@ -1,5 +1,5 @@
-use candle_core::{Device, Result, Tensor};
-use candle_nn::{AdamW, Linear, Module, Optimizer, ParamsAdamW};
+use candle_core::{DType, Device, Tensor};
+use candle_nn::{linear, loss::mse, AdamW, Module, Optimizer, ParamsAdamW, VarBuilder, VarMap};
 use std::error::Error;
 
 #[no_mangle]
@@ -11,8 +11,8 @@ pub extern "C" fn _start() {
 pub extern "C" fn run() {
     match greet_internal() {
         Ok(predictions) => {
-            println!("Model predictions (first 10):");
-            for (i, pred) in predictions.iter().take(10).enumerate() {
+            println!("Model predictions:");
+            for (i, pred) in predictions.iter().enumerate() {
                 println!("Prediction {}: {:.4}", i + 1, pred);
             }
         }
@@ -21,13 +21,6 @@ pub extern "C" fn run() {
 }
 
 fn greet_internal() -> Result<Vec<f32>, Box<dyn Error>> {
-    //     let csv_data = r#"survived,pclass,sex,age,sibsp,parch,fare,embarked,class,who,adult_male,deck,embark_town,alive,alone
-    // 0,3,male,22.0,1,0,7.25,S,Third,man,True,,Southampton,no,False
-    // 1,1,female,38.0,1,0,71.2833,C,First,woman,False,C,Cherbourg,yes,False
-    // 1,3,female,26.0,0,0,7.925,S,Third,woman,False,,Southampton,yes,True
-    // 1,1,female,35.0,1,0,53.1,S,First,woman,False,C,Southampton,yes,False
-    // 0,3,male,35.0,0,0,8.05,S,Third,man,True,,Southampton,no,True"#;
-
     // longitude,latitude,housing_median_age,total_rooms,total_bedrooms,population,households,median_income,median_house_value,ocean_proximity
     let csv_data = r#"-122.27,37.85,40.0,751.0,184.0,409.0,166.0,1.3578,147500.0,NEAR BAY
 -118.3,33.95,50.0,1843.0,326.0,892.0,314.0,3.1346,120000.0,<1H OCEAN
@@ -54,29 +47,32 @@ fn greet_internal() -> Result<Vec<f32>, Box<dyn Error>> {
     println!("{features:?}");
     println!("{target:?}");
 
-    let num_samples = features.len();
     let num_features = 8;
+    let num_samples = features.len() / num_features;
 
     // Convert data to tensors
     let features_tensor =
         Tensor::from_slice(&features, &[num_samples, num_features], &Device::Cpu)?;
     let target_tensor = Tensor::from_slice(&target, &[num_samples, 1], &Device::Cpu)?;
 
-    // Step 6: Define the linear regression model
-    let mut model = Linear::new(num_features, 1);
+    // Define the linear regression model
+    let varmap = VarMap::new();
+    let vb = VarBuilder::from_varmap(&varmap, DType::F32, &Device::Cpu);
+    let model = linear(num_features, 1, vb.pp("linear"))?;
 
-    // Step 7: Set up the optimizer
-    let mut optimizer = AdamW::new(
-        vec![],
-        ParamsAdamW::default(), // OptimizerConfig::adam(0.01).build(model.parameters()),
-    );
+    // Set up the optimizer
+    let params = ParamsAdamW {
+        lr: 0.1,
+        ..Default::default()
+    };
+    let mut optimizer = AdamW::new(vec![], params)?;
 
-    // Step 8: Training Loop
+    // Training Loop
     let num_epochs = 100;
     for epoch in 0..num_epochs {
         let predictions = model.forward(&features_tensor)?;
-        let loss = mse_loss(&predictions, &target_tensor)?;
-        optimizer.step(&loss)?;
+        let loss = mse(&predictions, &target_tensor)?;
+        optimizer.backward_step(&loss)?;
 
         if epoch % 10 == 0 {
             println!("Epoch {}: Loss = {:?}", epoch, loss);
@@ -84,11 +80,8 @@ fn greet_internal() -> Result<Vec<f32>, Box<dyn Error>> {
     }
 
     // Step 9: Make and print predictions
-    let predictions = model.forward(&features_tensor)?;
-    println!(
-        "Model predictions (first 10): {:?}",
-        predictions.slice([..10])
-    );
+    let predictions = model.forward(&features_tensor)?.squeeze(1)?.to_vec1()?;
+    println!("Model predictions: {predictions:?}");
 
     Ok(predictions)
 }

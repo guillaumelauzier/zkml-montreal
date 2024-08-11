@@ -1,7 +1,7 @@
-use ff::PrimeField;
+// use ff::PrimeField;
 use rayon::iter::{IntoParallelIterator, ParallelIterator};
 use std::{path::PathBuf, time::Instant};
-use tracing::{debug, info};
+use tracing::info;
 use zk_engine::{
     args::{WASMArgsBuilder, WASMCtx},
     nova::{
@@ -51,7 +51,8 @@ fn main() -> anyhow::Result<()> {
             //
             // Here we are configuring the path to the WASM file
             let args = WASMArgsBuilder::default()
-                .file_path(PathBuf::from("wasm/gradient_boosting.wasm"))
+                // .file_path(PathBuf::from("/home/vk/src/zkhack/montreal/zkml-montreal/target/wasm32-wasip1/release/ml.wasm"))
+                .file_path(PathBuf::from("../wasm/gradient_boosting.wasm"))
                 .invoke(Some(String::from("_start")))
                 .trace_slice_values(TraceSliceValues::new(CHUNK_SIZE * i, CHUNK_SIZE * (i + 1)))
                 .build();
@@ -61,11 +62,13 @@ fn main() -> anyhow::Result<()> {
             // Create a WASM execution context for proving.
             let mut wasm_ctx = WASMCtx::new_from_file(args).map_err(|e| e.to_string())?;
 
-            let (proof, public_values) =
+            let (proof, public_values, wasm_func_res) =
                 BatchedZKEProof::<E1, BS1<E1>, S1<E1>, S2<E1>>::prove_wasm(&mut wasm_ctx)
                     .map_err(|e| e.to_string())?;
 
-            let zi = public_values.execution().public_outputs();
+            info!("wasm result {:?}", wasm_func_res);
+
+            // let zi = public_values.execution().public_outputs();
 
             let task_end_time = Instant::now();
             let elapsed_time = (task_end_time - task_start_time).as_secs();

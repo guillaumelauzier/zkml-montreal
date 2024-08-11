@@ -1,5 +1,15 @@
 # Privacy-Preserving Machine Learning with Zero-Knowledge Proofs
 
+### Build and run
+
+```
+cargo build --release --target wasm32-wasip1
+RUST_LOG=debug cargo run --release
+```
+
+The path to the WASM binary may need to be corrected in `zk/src/main.rs`.
+
+
 ### Overview
 
 Welcome to the zKML project, a initiative designed to revolutionize the way data privacy is handled in collaborative machine learning efforts. This project aims to address one of the most pressing challenges in the digital age: enabling data sharing for health or financial predictions while preserving the privacy and security of sensitive information.
