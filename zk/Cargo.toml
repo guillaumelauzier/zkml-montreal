@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.86"
+ff = "0.13"
 rayon = "1.10.0"
 tracing = "0.1.40"
-zk-engine = { git = "https://github.com/ICME-Lab/zkEngine_dev.git" }
+zk-engine = { git = "https://github.com/ICME-Lab/zkEngine_dev.git", branch = "main" }

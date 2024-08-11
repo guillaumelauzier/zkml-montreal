@@ -954,9 +954,10 @@ name = "gradient-boosting-prover"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "ff",
  "rayon",
  "tracing",
- "zk-engine 0.1.0 (git+https://github.com/ICME-Lab/zkEngine_dev.git)",
+ "zk-engine 0.1.0 (git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main)",
 ]
 
 [[package]]
@@ -2520,7 +2521,7 @@ dependencies = [
 [[package]]
 name = "wasmi"
 version = "0.31.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git#677bf2cba3ad70f90bd4022515899943916219e6"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#81c36bc0bc0226712380dc79d43016d70f80e03c"
 dependencies = [
  "anyhow",
  "multi-stash",
@@ -2539,12 +2540,12 @@ dependencies = [
 [[package]]
 name = "wasmi_arena"
 version = "0.4.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git#677bf2cba3ad70f90bd4022515899943916219e6"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#81c36bc0bc0226712380dc79d43016d70f80e03c"
 
 [[package]]
 name = "wasmi_core"
 version = "0.13.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git#677bf2cba3ad70f90bd4022515899943916219e6"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#81c36bc0bc0226712380dc79d43016d70f80e03c"
 dependencies = [
  "downcast-rs",
  "libm",
@@ -2556,7 +2557,7 @@ dependencies = [
 [[package]]
 name = "wasmi_wasi"
 version = "0.31.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git#677bf2cba3ad70f90bd4022515899943916219e6"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#81c36bc0bc0226712380dc79d43016d70f80e03c"
 dependencies = [
  "wasi-cap-std-sync",
  "wasi-common",
@@ -3022,7 +3023,7 @@ checksum = "05830e57020ba43dd59b67608985017dbba680bbdb22f2e33c059b163ad88582"
 [[package]]
 name = "zk-engine"
 version = "0.1.0"
-source = "git+https://github.com/ICME-Lab/zkEngine_dev.git#677bf2cba3ad70f90bd4022515899943916219e6"
+source = "git+https://github.com/ICME-Lab/zkEngine_dev.git?branch=main#81c36bc0bc0226712380dc79d43016d70f80e03c"
 dependencies = [
  "anyhow",
  "arecibo",
