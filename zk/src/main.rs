@@ -11,7 +11,11 @@ use zk_engine::{
     },
     run::batched::public_values::PublicValues,
     run::batched::BatchedZKEProof,
-    traits::{args::ZKWASMArgs, zkvm::ZKVM},
+    traits::{
+        args::ZKWASMArgs,
+        public_values::{PublicValuesTrait, ZKVMPublicValues},
+        zkvm::ZKVM,
+    },
     utils::logging::init_logger,
     TraceSliceValues,
 };
@@ -28,7 +32,7 @@ const CHUNK_SIZE: usize = 100_000;
 
 struct ShardResult {
     proof: BatchedZKEProof<E1, BS1<E1>, S1<E1>, S2<E1>>,
-    public_values: PV<E1, BS1, S1, S2>,
+    public_values: PublicValues<E1, BS1<E1>, S1<E1>, S2<E1>>,
     elapsed_time: u64,
 }
 
@@ -85,7 +89,7 @@ fn main() -> anyhow::Result<()> {
     let tasks_elapsed_time: u64 = successful_results.iter().map(|r| r.1.elapsed_time).sum();
 
     for (i, proof, public_values) in successful_results
-        .iter()
+        .into_iter()
         .map(|r| (r.0, r.1.proof, r.1.public_values))
     {
         let pass = proof.verify(public_values)?;
