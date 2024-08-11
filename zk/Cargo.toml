@@ -1,0 +1,10 @@
+[package]
+name = "gradient-boosting-prover"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.86"
+rayon = "1.10.0"
+tracing = "0.1.40"
+zk-engine = { git = "https://github.com/ICME-Lab/zkEngine_dev.git" }
