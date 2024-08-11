@@ -1,4 +1,4 @@
-# zKML for Data Privacy Contributions
+# Privacy-Preserving Machine Learning with Zero-Knowledge Proofs
 
 ### Overview
 
